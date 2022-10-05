@@ -9,14 +9,14 @@
 
 /* Set the background color for my page: */
 body{
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(255, 255, 255);
  
 }
 
 
 /* Choose the appearance of the tags, h1, h3 and p: */
 h1, h3, p{
-    color:rgb(17, 17, 17);
+    color:rgb(2, 2, 2);
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
@@ -24,17 +24,17 @@ h1, h3, p{
 .myWeek1{
     margin: auto;
     max-width: 600px;
-    background-color: bisque;
+    background-color: rgba(123, 115, 233, 0.712);
 }
 
 
 /* Set the apperance of the class, chart */
 .chart{
-    background-color: orange;
-    width:330px;
-    border-width: 10px;
+    background-color: white;
+    width:370px;
+    border-width: 2px;
     border-style: solid;
-    border-radius: 5px;
+    border-radius: 3px;
     border-color: red;
 
     
