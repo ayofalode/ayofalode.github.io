@@ -1,0 +1,206 @@
+/* Richard Davies, Data Science for Economists */
+
+/* This is my first proper css file */
+
+
+/* Import a font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+/* Set the background color for my page: */
+body{
+    background-color: rgb(0, 0, 0);
+ 
+}
+
+.wrap a {
+    float:left;
+    list-style-type: none;
+    color: #f2f2f2;
+    text-align: center;
+    padding-top: clamp(0.5em,3%,1.5em);
+    padding-bottom: clamp(0.5em,3%,1.5em);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: 'Merriweather', serif;
+    cursor: pointer;
+    width: 21.7%;
+    margin: auto;
+
+  }
+
+
+/* BUTTONS */
+
+a{
+    border: 5px;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+    
+}
+
+#link1{
+    background-color: rgba(255, 255, 255, 0.849);
+    background-size: 30px;
+
+    padding:20px;
+    
+    border:2px;
+    border-color:black;
+    border-style: solid;
+    border-radius: 3px;
+    
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:700;
+    color:rgb(0, 0, 0);
+    
+    text-decoration: none;
+    text-align: center;
+
+}
+
+#link1:hover{
+
+    background-color: rgba(112, 102, 247, 0.781);
+
+    border:2px;
+    border-color:black;
+    border-style: solid;
+    text-align: center;
+    
+}
+
+#link2{
+    background-color: rgba(255, 255, 255, 0.849);
+
+    padding:20px;
+    
+    border:2px;
+    border-color:black;
+    border-style: solid;
+    border-radius: 3px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:700;
+    color:black;
+    
+    text-decoration: none;
+    text-align: center;
+
+}
+
+#link2:hover{
+
+    background-color: rgba(112, 102, 247, 0.781);
+
+
+    border:2px;
+    border-color:black;
+    border-style: solid;
+    
+}
+
+#link3{
+    background-color: rgba(255, 255, 255, 0.849);
+
+    padding:20px;
+    
+    border:2px;
+    border-color:black;
+    border-style: solid;
+    border-radius: 3px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:700;
+    color:black;
+    
+    text-decoration: none;
+    text-align: center;
+}
+
+#link3:hover{
+
+    background-color: rgba(112, 102, 247, 0.781);
+
+
+    border:2px;
+    border-color:black;
+    border-style: solid;
+    text-align: center;
+}
+
+#link4{
+    background-color: rgba(255, 255, 255, 0.849);
+    padding:20px;
+    
+    border:2px;
+    border-color:black;
+    border-style: solid;
+    border-radius: 3px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:700;
+    color:black;
+    
+    text-decoration: none;
+    text-align: center;
+}
+
+#link4:hover{
+
+    background-color: rgba(112, 102, 247, 0.781);
+
+
+    border:2px;
+    border-color:black;
+    border-style: solid;
+    text-align: center;
+}
+
+/* Choose the appearance of the tags, h1, h3 and p: */
+h1, h3, p{
+    color:rgb(255, 255, 255);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    line-height: 3;
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    color:rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    line-height: 2;
+    text-size-adjust: 40%;
+    text-align: center;
+}
+h2{
+    color:rgb(255, 255, 255);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+      
+
+.myWeek1{
+    margin: auto;
+    max-width: 600px;
+    background-color: rgba(177, 177, 177, 0.233);
+   
+}
+
+
+/* Set the apperance of the class, chart */
+.chart{
+    background-color: white;
+    width:370px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 3px;
+    border-color: rgb(87, 58, 250);
+
+    
+}
+    
