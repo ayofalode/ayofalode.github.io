@@ -1,0 +1,148 @@
+/* Import a font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+/* Set the background color for my page: */
+
+body{
+    background-color: rgb(255, 255, 255);
+ }
+
+
+/* Choose the appearance of the tags, h1, h3 and p: */
+    
+.myWeek1{
+    margin: auto;
+    max-width: 900px;
+    background-color: #ffffff;
+
+      
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color:#ffffff;
+}
+
+
+/* Set the apperance of the class, chart */
+.chart{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    max-width: 1000px;
+    background-color:#ffffff; 
+    width: 440px;
+    height: 420px;
+    border-color: aliceblue;
+}
+
+.chart1{
+    background-color: white;
+    width:500px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: grey;
+
+}
+
+
+.chart2{
+    background-color: white;
+    width:300px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: white;
+
+}
+
+.chart3{
+  width: 300;
+  height: 350;
+  border-width: 5px;
+  max-width: 1000px;
+  text-align: center;
+  background-color: #ffffff;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #ffffff;
+  margin: auto;
+  padding: 10px
+}
+.topnav {
+    background-color: transparent;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px 12px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif ;
+  float:left;
+  width: 24.8%; 
+  padding: 12px 0; 
+  transition: all 0.3s ease; 
+  font-size: 15px; 
+  }
+  
+  
+  .topnav a:hover {
+    background-color: rgb(243, 100, 33);
+    color: black;
+  }
+  
+  .topnav, .container {
+    --borderWidth: 3px;
+    background: #80271b;
+    position: relative;
+    border-radius: var(--borderWidth);
+  }
+
+  .topnav:after{
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #ab6666, #ac5e5e, #f8625d, #c58787, #d1b091, #f0cda9, #bbb1b1, #ddbdbd);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+
+  .container:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #ab6666, #ac5e5e, #f8625d, #c58787, #d1b091, #f0cda9, #bbb1b1, #ddbdbd);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+
+
+h1{
+    color:#000000;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    line-height:1.5em;
+}
+
+h2, h3, p{
+    color:rgb(0, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
