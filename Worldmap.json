@@ -1,0 +1,18 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 700,
+    "height": 400,
+    "title": {"text": "World Map", "anchor": "start", "color": "black"},
+    "data": {
+      "url": "https://raw.githubusercontent.com/ayofalode/ayofalode.github.io/main/WorldMap.geo.json",
+      "format": {"property": "features"}
+    },
+    "projection": {"type": "naturalEarth1"},
+    "mark": {
+      "type": "geoshape",
+      "fill": "rgb(200,200,200)",
+      "stroke": "lightgrey",
+      "strokeWidth": 1.5
+    },
+    "encoding": {"tooltip": {"field": "properties.name", "type": "nominal"}}
+  }

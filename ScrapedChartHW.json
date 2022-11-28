@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": [
+        "Chelsea FC's points tally over every season",
+        "in the premier league era"
+      ],
+      "subtitle": [
+        "Total Points Amassed (Y), Seasons (X)",
+        "Data from Fbref, all stats normalised per game."
+      ],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    
+    "config": {"background": "white", "view": {"stroke": "transparent"}},
+    "data": {
+      "url": "https://raw.githubusercontent.com/ayofalode/ayofalode.github.io/main/ChelseaFinishes.csv",
+      "format": {"type": "csv"}
+    },
+    "mark": {"type": "circle", "color": "#0962e7", "opacity": 0.9},
+    "height": 300,
+    "width": 300,
+    "encoding": {
+      "x": {
+        "field": "Season",
+        "type": "nominal",
+      
+        "axis": {"grid": false},
+        "title": null
+        
+      },
+      "y": {
+        "field": "Points",
+        "type": "quantitative",
+        
+        "axis": {"grid": false},
+        "title": null
+      }
+      
+     
+      
+    }
+  }

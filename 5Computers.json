@@ -1,0 +1,49 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+
+    "title": {
+    "text": "Output in Computer products",
+    "subtitle": ["Output per job: Manufacturing subsections,",
+    "CB SIC07, 2019=100, SA, UK", "Source: ONS"],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+
+    "width":200,
+    "height":200,
+
+    "data": {
+        "name":"myData",
+        "url": "https://raw.githubusercontent.com/ayofalode/ayofalode.github.io/main/data_ONS_DJB7.json",
+        "format": {
+          "type":"json",
+          "property": "years"
+        }},
+  
+
+    "mark":{
+      "type": "line",
+      "color":"#00BFFF",
+      "strokeWidth":2,
+      "opacity":1
+    },
+
+    "encoding": {
+      
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "title":null
+        },
+  
+      "y": {
+        "field": "value",                
+        "type": "quantitative",
+        "title":null
+        }
+  }
+}
