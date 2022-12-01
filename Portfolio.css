@@ -5,7 +5,7 @@
 /* Set the background color for my page: */
 
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(220, 220, 233);
  }
 
 
@@ -14,13 +14,13 @@ body{
 .myWeek1{
     margin: auto;
     max-width: 900px;
-    background-color: #ffffff;
+    background-color: rgb(220, 220, 233);
 
       
     border-width: 3px;
     border-style: solid;
     border-radius: 10px;
-    border-color:#ffffff;
+    border-color:rgb(220, 220, 233);
 }
 
 
@@ -138,11 +138,161 @@ h1{
     line-height:1.5em;
 }
 
+h4{
+  color:#000000;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  line-height:1.5em;
+}
+
 h2, h3, p{
     color:rgb(0, 0, 0);
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     line-height: 2;
     letter-spacing: 1px;
 }
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+nav, .container{
+    --borderWidth: 3px;
+    background: #80271b;
+    position: relative;
+    border-radius: var(--borderWidth);
+  }
+
+
+
+.navbar{
+    flex:1;
+    text-align: center;
+
+}
+
+li{
+    display: inline;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(216, 161, 88);
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline-block;
+    position: relative;
+    border: 3px;
+    background-color: rgb(220, 220, 233);
+}
+
+li a:link{
+    color: antiquewhite;
+    text-decoration: none;
+}
+li a:visited{
+    color: rgb(0, 0, 0);
+}
+li a:active{
+    font-weight: bold;
+    color: rgba(250,235,215, 0.05);
+    
+}
+
+li:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(96, 125, 252);
+    transform-origin: center;
+    transition: transform 0.25s ease-out;
+}
+
+li:hover:after{
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
+
+
+  
+/*
+a{
+    border: 5px;
+    border-color: rgb(253, 253, 253);
+    border-style: solid;
+
+    margin:15px
+}
+
+
+#link1{
+    border-color:pink;
+    border-style:dashed
+}
+
+#link2{
+    border:2px;
+    border-color:black;
+    border-style: solid;
+
+    border-radius: 5px;
+
+}
+
+#link3{
+    background-color: #fcf7f7;
+
+    padding:20px;
+    
+    border:2px;
+    border-color:#5A5A5A;
+    border-style: solid;
+    border-radius: 10px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight:700;
+    color:#5A5A5A;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+#link3:hover{
+
+    background-color: #f4c2c2;
+
+    border:2px;
+    border-color:#5A5A5A;
+    border-style: solid;
+    
+}
+
+
+#link4{
+    background-color: yellow;
+
+    padding:20px;
+    
+    border:20px;
+    border-color:black;
+    border-style: solid;
+    border-radius: 10px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:700;
+    color:grey;
+    
+    text-decoration: none;
+
+    animation: border-pulsate1 4s infinite;
+}
+*/
 
