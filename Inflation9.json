@@ -1,0 +1,36 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Inflation rate of the US over the years",
+    "title": {
+      "text": "US Inflation Rate With line of best fit",
+      "subtitle": "Source: World Bank",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black",
+      "subtitleColor": "#9f3eff"
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/ayofalode/ayofalode.github.io/main/cleanedInflation.csv"
+      
+    },
+    "height": 300,
+    "width": 300,
+    "layer": [
+      {
+        "mark": {"type": "line", "color": "green"},
+        "encoding": {
+          "x": {"field": "Year", "type": "temporal", "title": "Years"},
+          "y": {"field": "Inflation", "type": "quantitative", "title": "Inflation Rate"}
+        }
+      },
+      {
+        "mark": {"type": "line", "color": " #002199"},
+        "transform": [{"regression": "Inflation", "on": "Year"}],
+        "encoding": {
+          "x": {"field": "Year", "type": "temporal"},
+          "y": {"field": "Inflation", "type": "quantitative"}
+        }
+      }
+    ]
+  }
