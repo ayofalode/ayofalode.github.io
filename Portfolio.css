@@ -23,6 +23,16 @@ body{
     border-color:rgb(220, 220, 233);
 }
 
+.fa-brands{
+    color: rgb(0, 0, 0)
+}
+.fa-regular{
+    color:rgb(96, 125, 252)
+}
+.fa-books{
+    color: rgb(96, 125, 252)
+}
+
 
 /* Set the apperance of the class, chart */
 .chart{
@@ -150,6 +160,15 @@ h2, h3, p{
     font-family: 'Roboto', sans-serif;
     text-align: center;
     line-height: 2;
+    letter-spacing: 1px;
+}
+
+h5{
+    color:rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    line-height: 2;
+    font-size: 20px;
     letter-spacing: 1px;
 }
 
