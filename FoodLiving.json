@@ -1,0 +1,44 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": [
+        "Which of these, if any, are you doing because of the increases in the cost of living?"
+      ],
+      "subtitle": [ "Data: ONS, Proportion of adults who reported that they were spending less on their food shopping and essentials because","of increases in the cost of living, by deprivation quintile"],
+  
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "data": {
+      "values": [
+        {"Answer": "1st Quintile, Most Deprived", "Percent": "54"},
+        {"Answer": "2nd Quintile", "Percent": "46"},
+        {"Answer": "3rd Quintile", "Percent": "53"},
+        {"Answer": "4th quintile", "Percent": "40"},
+        {"Answer": "Least Deprived", "Percent": "36"}
+      ]
+  
+    },
+    "height": 400,
+    "width": 500,
+    "mark": {"type": "bar"},
+    "encoding": {
+      "x": {
+        "field": "Answer",
+        "type": "ordinal",
+        "axis": {"title": null, "grid": false, "ticks": false, "labelAngle": 360}
+      },
+      "y": {
+        "field": "Percent",
+        "type": "quantitative",
+        "title": "Percent",
+        "axis": {"grid": false},
+        "scale": {"domain": [0, 101]}
+       
+  
+      },
+      "color": {"field": "Answer", "legend": false}
+    }
+  }

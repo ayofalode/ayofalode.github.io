@@ -1,0 +1,66 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title":{
+      "text": [
+         "How investment into high quality players determines", 
+         "how successful they are in the league"
+      ],
+      "subtitle": [
+         "Number of wins attained by teams in the 21/22",
+        "Premier League Season, with varying degrees of wage investment",
+        "Wins in the Season (Y), Total Annual Wages in the season(X)"  
+      ],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black",
+      "subtitleColor": "#9f3eff"
+    },
+    
+    "config": {"background": "white", "view": {"stroke": "transparent"}},
+    "data": {
+      "url": "https://raw.githubusercontent.com/ayofalode/ayofalode.github.io/main/FootballRankings.csv",
+      "format": {"type": "csv"}
+    },
+    "mark": {"type": "circle", "color": "#0962e7", "opacity": 0.9},
+    "height": 300,
+    "width": 300,
+    "encoding": {
+      "x": {
+        "field": "wages",
+        "type": "nominal",
+      
+        "axis": {"grid": false},
+        "title": null
+        
+      },
+      "y": {
+        "field": "wins",
+        "type": "quantitative",
+        
+        "axis": {"grid": false},
+        "title": null
+      },
+   
+    "tooltip":[
+      {"field": "squad", "type": "ordinal", "title": "squad"},
+       {
+        "field": "wage",
+        "type": "nominal",
+        "title": "total annual wage"
+        
+      },
+      {
+        "field": "points",
+        "type": "quantitative",
+        "title": "points",
+        "format": ".2f"
+      }
+
+
+    ]
+   
+     
+      
+    }
+  }
