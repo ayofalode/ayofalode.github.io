@@ -6,7 +6,8 @@
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",
-      "color": "black"},
+      "color": "#000000",
+      "subtitleColor": "#9f3eff"},
   
   "data":{"url": "https://raw.githubusercontent.com/ayofalode/ayofalode.github.io/main/data_IMF_creditOutstanding.csv"},
   
@@ -16,7 +17,12 @@
 
 
   "height": 300,
-  "width": 260,
+  "width": 300,
+
+  "config": {
+    "background":"#ffffff",
+    "view": {
+        "stroke": "transparent"}},
 
   "mark": {
     "type": "bar",
@@ -30,12 +36,16 @@
          "title": null,
          "grid": false,
          "ticks": false,
-         "labelAngle": 45}},
+         "labelAngle": 45,
+        "labelColor":"#000000"}},
 
       "y": {
         "field": "billions",
         "type": "quantitative",
         "title": "",
-        "axis": {"grid": false}}
+        "axis": {
+        "grid": false,
+        "labelColor":"#000000"}}
+
 }
 }
