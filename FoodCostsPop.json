@@ -1,0 +1,94 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": [
+        "The Cost of Healthy Diets in Countries and The Population Who Are Unable To Afford It",
+        "2017-2020"
+      ],
+      "subtitle": [
+        "Cost of Healthy Diet(x), Share Of Population (y). size by Number of People unable to afford Diet,",
+        "source: OurWorldInData"
+      ],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "config": {"background": "white", "view": {"stroke": "transparent"}},
+    "data": {
+      "url": "https://raw.githubusercontent.com/ayofalode/ayofalode.github.io/main/FoodCostsPopulation.csv"
+    },
+    "transform": [
+      {"filter": "datum.Year==year"}
+    ],
+    "mark": {"type": "circle", "color": "#000080", "opacity": 1},
+    "height": 280,
+    "width": 300,
+  
+    "params": [
+      {
+        "name": "year",
+        "value": 2020,
+        "bind": {
+          "input": "range",
+          "min": 2017,
+          "max": 2020,
+          "step": 1,
+          "name": "Select the year:"
+        }
+      }
+    ],
+  
+    "encoding": {
+      "x": {
+        "field": "Cost of Healthy Diet",
+        "type": "quantitative",
+        
+        "axis": {"grid": false},
+        "title": "Cost of Healthy Diet ($)"
+      },
+      "y": {
+        "field": "Percent of Population",
+        "type": "quantitative",
+        
+        "axis": {"grid": false},
+        "title": "Share of Population Unable To Afford A Healthy Diet"
+      },
+       "color": {
+        "field": "IncomeGroup",
+        "type": "ordinal",
+        "scale": {"scheme": "set1"},
+        "legend": {"orient": "right"},
+        "title": "Income Group"
+      },
+      "size": {
+        "field": "People Not Afford",
+        "type": "quantitative",
+        "scale": {"range": [8, 600]},
+        "legend": false
+        
+        
+      },
+      "tooltip": [
+        {"field": "Name", "type": "ordinal", "title": "Player"},
+        {
+          "field": "Cost of Healthy Diet",
+          "type": "quantitative",
+          "title": "Cost of Healthy Diet",
+          "format": ".2f"
+        },
+        {
+          "field": "People Not Afford",
+          "type": "quantitative",
+          "title": "Population That Cannot Afford a Healthy Diet",
+          "format": ".2f"
+        },
+        {
+            "field": "Percent of Population",
+            "type": "quantitative",
+            "title": "% of Population That Cannot Afford a Healthy Diet",
+            "format": ".2f"
+        }
+      ]
+    }
+  }

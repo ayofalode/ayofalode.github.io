@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/ayofalode/ayofalode.github.io/main/FoodExportsFromRussiaAndUkraine.csv"
+    },
+    "title": {
+      "text": "Global Food Export: Russia and Ukraine",
+      "subtitle": "The share of the global large food crops that is exported from Ukraine and Russia, taken from 2019. Source: FAO.",
+      
+      "align": "left",
+      "anchor": "start"
+    },
+    "height": 400,
+    
+    
+    "mark": {"type": "bar", "size": 125},
+    "width": {"step": 140},
+    "encoding": {
+      "y": {
+        "aggregate": "sum",
+        "field": "Value",
+        
+        "title": null,
+        "scale": {"domain": [0, 100]},
+        "axis": {
+  
+          "title": "Percentage",
+          "labelExpr": "datum.label + '%'"
+        }
+      },
+      "x": {"field": "Type", "title": null, "axis": {"labelAngle": 0}},
+      "color": {"field": "Country", "title": null, "scale": {"scheme": "set1"}},
+      "tooltip": [
+      {"field": "Type", "type": "nominal", "title": "Food Type"},
+      {"field": "Country", "type": "nominal", "title": "Country"},
+      {"field": "Value", "type": "quantitative", "title": "Percentage"}
+    ]
+    },
+    "config": {"legend": {"orient": "right"}},
+    "view": {"stroke": null}
+    
+  }

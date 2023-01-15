@@ -1,0 +1,65 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "",
+    "title": {
+      "text": [
+        "Prevalence of Moderate or Severe Food Insecurity In The Population(%)"
+      ],
+      "subtitle": ["% of people in the population that are in a degree of food insecurity", 
+      "Source: The World Bank API"],
+  
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "width": 300,
+    "height": 310,
+    
+    "config": {"style": {"cell": {"stroke": "transparent"}}},
+    "data": {
+      "url": "https://raw.githubusercontent.com/ayofalode/ayofalode.github.io/main/FoodMapApi1.csv"
+    },
+    "transform": [
+      {
+        "lookup": "Country Name",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/ayofalode/ayofalode.github.io/main/topomap.json",
+            "format": {"type": "topojson", "feature": "countries1"}
+          },
+          "key": "properties.name",
+          "fields": ["properties", "type", "geometry"]
+        }
+      },
+      {"filter": "datum.Year==year"}
+    ],
+    "params": [
+      {
+        "name": "year",
+        "value": 2015,
+        "bind": {
+          "input": "range",
+          "min": 2015,
+          "max": 2020,
+          "step": 1,
+          "name": "Select the year:"
+        }
+      }
+    ],
+    "projection": {"type": "equalEarth"},
+    "mark": "geoshape",
+    "encoding": {
+       "color": {
+        "field": "Food",
+        "type": "quantitative",
+        "scale": {"scheme": "bluepurple"},
+        "title": "Food Insecurity %"
+
+      },
+      "tooltip": [
+        {"field": "properties.name", "type": "nominal", "title": "Country"},
+        {"field": "Food", "type": "quantitative", "title": "Percentage of Population In Food Insecurity"}
+      ]
+    }
+  }

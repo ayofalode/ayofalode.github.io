@@ -1,0 +1,45 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 700,
+    "height": 400,
+    "title": {
+      "text": "Which countries are most reliant on food imports from Ukraine and Russia?",
+      "subtitle": "Sunflower oil imports from Ukraine and Russia",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+      
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/ayofalode/ayofalode.github.io/main/WorldMap.geo.json",
+      "format": {"property": "features"}
+    },
+    "projection": {"type": "equalEarth"},
+    "transform": [
+      {
+        "lookup": "properties.name",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/ayofalode/ayofalode.github.io/main/UkraineRussiaMapClean.csv"
+          },
+          "key": "Country Name",
+          "fields": ["Sunflower Oil Imports"]
+        }
+      }
+    ],
+    "mark": {"type": "geoshape", "stroke": "lightgrey", "strokeWidth": 1.5},
+    "encoding": {
+      "tooltip": [
+        {"field": "properties.name", "type": "nominal", "title": "Country"},
+        {"field": "Sunflower Oil Imports",
+        "title": "Percentage"}
+      ],
+      "color": {
+        "field": "Sunflower Oil Imports",
+        "type": "quantitative",
+        "scale": {"scheme": "darkred"}
+        
+      }
+    }
+  }

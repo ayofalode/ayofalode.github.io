@@ -1,0 +1,67 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Number of new business registrations per 1,000 people plotted against Social Mobility Index",
+    "data": {
+      "url": "https://raw.githubusercontent.com/ayofalode/ayofalode.github.io/main/FoodIndicesClean.csv"
+      
+    },
+    "title": {
+      "text": "Food Inflation",
+      "subtitle": [
+        "Average of five commodity group price indices weighted by the average export", 
+        "shares of each of the groups between 1990-2020",
+        "source: FAO"
+      ],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start"
+    },
+    "height": 300,
+    "width": 350,
+    "config": {"style": {"cell": {"stroke": "transparent"}}},
+    "mark": "line",
+    "background": null,
+    "selection": {
+      "inflation_type": {
+        "type": "single",
+        "fields": ["inflation_type"],
+        "bind": {
+          "input": "select",
+          "options": [
+            null,
+            "Cereals",
+            "Dairy",
+            "Meat",
+            "Oils",
+            "Sugar"
+          ],
+          "name": "Continent"
+        }
+      }
+    },
+    "transform": [{"filter": {"selection": "inflation_type"}}],
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "temporal",
+        "sort": []
+        
+      },
+      "y": {
+        "field": "inflation_value",
+        "type": "quantitative",
+        "sort": [],
+        "title": "Food Price Index",
+        "scale": {"domain": [0, 270]}
+      },
+      "color": {
+        "field": "inflation_type",
+        "type": "nominal",
+        "title": "Food Type:",
+        "sort": [],
+        "scale": {"scheme": "darkmulti"}
+      },
+      "tooltip": [{"field": "inflation_type", "type": "nominal", "title": "Food Type"},
+      {"field": "inflation_value", "type": "quantitative", "title": "Price"}]
+    }
+  }

@@ -1,0 +1,60 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A simple bar chart with embedded data.",
+    "title": {
+      "text": "Arable Land Per Person",
+      "subtitle": "Arable Land per person across 6 continents from 1961-2018, Source: The World Bank",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "config": {"background": "#ffffff"},
+    "height": 300,
+    "width": 300,
+    "data": {
+      "url": "https://raw.githubusercontent.com/ayofalode/ayofalode.github.io/main/ArableContinent.csv"
+    },
+    "transform": [
+      {"calculate": "year(datum.Year)", "as": "year"},
+      {"filter": "datum.year>=minYear"},
+      {"filter": "datum.year<=maxYear"}
+    ],
+    "params": [
+      {
+        "name": "minYear",
+        "value": 1961,
+        "bind": {
+          "input": "range",
+          "min": 1961,
+          "max": 2018,
+          "step": 1,
+          "name": "Start year:"
+        }
+      },
+      {
+        "name": "maxYear",
+        "value": 2018,
+        "bind": {
+          "input": "range",
+          "min": 1961,
+          "max": 2018,
+          "step": 1,
+          "name": "End year:"
+        }
+      }
+    ],
+  
+     
+    
+    "mark": {"type": "line"},
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "nominal",
+        "axis": {"labelAngle": 0, "labelOverlap": "true"}
+      },
+      "y": {"field": "Arable land", "type": "quantitative"},
+      "color": {"field": "Continent", "type": "nominal"}
+    }
+  }
