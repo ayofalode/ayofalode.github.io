@@ -1,10 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
-      "text": "Global Hunger Index vs Populaton Density",
+      "text": "Global Hunger Index vs Population Growth",
       "subtitle": [
-        "Global Hunger Index vs Populaton Density, Source: FAO"
-        
+        "Global Hunger Index vs Populaton Growth, Source: FAO"
+       
       ],
       "subtitleFontStyle": "italic",
       "subtitleFontSize": 10,
