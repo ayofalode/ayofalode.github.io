@@ -25,7 +25,7 @@
         "type": "quantitative",
         
         "axis": {"grid": false},
-        "title": "Population Density"
+        "title": "Population Growth"
       },
       "y": {
         "field": "Global Hunger",
