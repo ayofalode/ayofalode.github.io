@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Number of new business registrations per 1,000 people plotted against Social Mobility Index",
+    "description": "",
     "data": {
       "url": "https://raw.githubusercontent.com/ayofalode/ayofalode.github.io/main/FoodIndicesClean.csv"
       
